@@ -4,12 +4,6 @@ server:
 spring:
   application:
     name: reactor-failure
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: https://dev-ymp8imynkijzas0o.us.auth0.com/
-          jwk-set-uri: https://dev-ymp8imynkijzas0o.us.auth0.com/.well-known/jwks.json
 logging:
   level:
     ROOT: info

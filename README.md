@@ -20,11 +20,9 @@ of these are disabled, the problem does not occur.
    ```shell
    $> ./gradlew bootRun
    ```
-2. **Hit the endpoint**— the endpoint is secured with an oauth2 resource server. The access token below should be valid for a full year from 06/21/2023. This is 
-using a temporary development environment from Auth0, but the test can be repeated in your own environment by configuring the security settings in the 
-server's `application.yml`.
+2. **Hit the endpoint**— 
     ```shell
-    $> curl http://localhost:8002/v1/hello-world -H "Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ik00UVRQWEt6QVlHMUszbkhUV0ZrVyJ9.eyJpc3MiOiJodHRwczovL2Rldi15bXA4aW15bmtpanphczBvLnVzLmF1dGgwLmNvbS8iLCJzdWIiOiI4c3g3RHlWNFRjTml5WjZyc3dSRFFDbG5HVVVFRUM5ZEBjbGllbnRzIiwiYXVkIjoiaHR0cHM6Ly9kZXYteW1wOGlteW5raWp6YXMwby51cy5hdXRoMC5jb20vYXBpL3YyLyIsImlhdCI6MTY4NzM3ODcwMiwiZXhwIjoxNjg3NDY1MTAyLCJhenAiOiI4c3g3RHlWNFRjTml5WjZyc3dSRFFDbG5HVVVFRUM5ZCIsImd0eSI6ImNsaWVudC1jcmVkZW50aWFscyJ9.ERcBwCimzCqtO1FWdR_RRE424h0HpbhJv0NBW4WDpV4R2iLByppyAtgYFSKgViGXZSBQoMhc-RImWf7UlRXcytTp8QcjrW3ZOz2tLXdogJtG9FW_RJ8nbMYJA7DYekJN3w_XRh4cH8S9EDOZDqpQe9wIAdlgXhsTmYvIgPTPUGSwR9uSEAP_zGusXP7fJ1P_kjadP5nAWOAZU1ZA7XSGUu5ODWiNJ_9pkcHy5lQrxuJiJLmDZdAYRlJ57pLZSCCtq_eMQGh3GFgbPF29FAEZ_IWmogl5S9TSCHb5cFUkQgnCC5z_9JR7VzQWMqe7-TgFtphedz5rxPa2u6ZxnjY84g"
+    $> curl http://localhost:8002/v1/hello-world/keys
     ```
    
 You will see the call above succeed or fail depending upon whether or not you call `Hooks.enabledAutomaticContextPropogation()` in the main application. 
